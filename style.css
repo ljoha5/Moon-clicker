@@ -9,6 +9,9 @@ html, body{
 	user-select: none;
 }
 body{
+	background-image: url(space.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 	overflow:hidden;
 }
 .clickfon{
