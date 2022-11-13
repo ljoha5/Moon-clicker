@@ -11,7 +11,7 @@ html, body{
 body{
 	padding: 0;
 	margin: 0;
-	width: 98%;
+	max-width: 98%;
 	background-image: url(space.png);
 	background-size: cover;
 	overflow:hidden;
