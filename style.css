@@ -61,6 +61,7 @@ body{
 @media (max-width: 1200px){
 	.footer{
 			width: 80%;
+			height: 20%;
 			left: 10%;
 	}
 	.btn{
