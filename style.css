@@ -10,7 +10,7 @@ html, body{
 }
 body{
 	background-image: url(space.png);
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	overflow:hidden;
 }
