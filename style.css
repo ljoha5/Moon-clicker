@@ -76,6 +76,10 @@ body{
 	.btn{
 		width: 150px;
 	}
+	.shop{
+		opacity: 0;
+		visibility: 0;
+	}
 }
 @media (max-width: 600px){
 	.footer{
