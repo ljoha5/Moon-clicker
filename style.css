@@ -66,6 +66,10 @@ body{
 	}
 	.btn{
 		width: 200px;
+		height: 220px;
+	}
+	.text{
+		font-size: 5em;
 	}
 }
 @media (max-width: 1010px){
@@ -76,10 +80,14 @@ body{
 	}
 	.btn{
 		width: 150px;
+		height: 300px;
 	}
 	.shop{
 		opacity: 0;
 		visibility: 0;
+	}
+	.text{
+		font-size: 6em;
 	}
 }
 @media (max-width: 600px){
