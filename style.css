@@ -67,6 +67,15 @@ body{
 		width: 200px;
 	}
 }
+@media (max-width: 1010px){
+	.footer{
+			width: 90%;
+			left: 5%;
+	}
+	.btn{
+		width: 150px;
+	}
+}
 @media (max-width: 600px){
 	.footer{
 		opacity: 0;
