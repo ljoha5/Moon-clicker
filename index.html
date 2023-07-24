@@ -92,7 +92,7 @@ function auto(){
 		
 		
 		document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
-		kloun *= 1.6;
+		kloun *= 99999999999;
 		if (autoprice == 25){
 			plusik();
 			document.getElementById("auto").innerHTML = 'AutoClicker - $' + `${autoprice.toFixed(1)}`;
@@ -101,7 +101,7 @@ function auto(){
 			null;
 		}
 		
-		autoprice *= 9999999999;
+		autoprice *= 1.3;
 		document.getElementById("auto").innerHTML = 'AutoClicker - $' + `${autoprice.toFixed(1)}`;
 	}  else{
 		alert("You need more money!");
