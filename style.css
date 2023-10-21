@@ -108,7 +108,7 @@ body{
 	.btn{
 		opacity: 0;
 	}
-	.moon{
+	.moon, .ach, .first_clicks_ach, .first_clicks_ach2, .first_clicks_ach3{
 		opacity: 0;
 	}
 	.clickfon{
