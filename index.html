@@ -20,9 +20,13 @@
 
 
 
-<p class="first_clicks_ach button-35"><span id="max_al" style="margin-right: 10px;">100</span> clicks: +50$ <span></span></p>
+<p class="first_clicks_ach button-35"><span id="max_al" style="margin-right: 10px;">100</span> clicks:<span style="margin-left: 10px;" id="reward_max_all"> </span><span></span></p>
 <p class="first_clicks_ach2 button-35"><span id="clicks_all"></span>/<span id="max_all"></span></p>
-<p class="first_clicks_ach3 button-36" id="collect" onclick="close_collect()">collect $50</p>
+<p class="first_clicks_ach3 button-36" id="collect" onclick="close_collect()">collect <span style="margin-left: 10px;" id="reward_max_all">x</span></p>
+
+<p class="auto_ach button-35">buy AutoClicker: <span style="margin-left: 10px;" id="reward_max_auto"></span></p>
+<p class="auto_ach2 button-35"><span id="auto_all">0</span>/<span id="max_auto">5</span></p>
+<p class="auto_ach3 button-36" id="collect_auto" onclick="collect_auto()">collect <span style="margin-left: 10px;" id="reward_max_auto"></span></p>
 
 
 <!-- <button id="ach" onclick="openach()" class="button-30 ach" role="button">achievements</button> -->
@@ -64,6 +68,18 @@ let max_all = 100;
 let image_all = max_all - 1;
 document.getElementById("max_all").innerHTML = max_all;
 document.getElementById("max_al").innerHTML = max_all;
+
+let reward_max_all = 50;
+let copy_reward_max_all = 0;
+document.getElementById("collect").innerHTML = ' $' + `${reward_max_all}`;
+
+let reward_max_auto = 75;
+let copy_reward_max_auto = 0;
+document.getElementById("collect_auto").innerHTML = 'collect: $' + `${reward_max_auto}`;
+
+let max_auto = 5;
+document.getElementById("max_auto").innerHTML = max_auto;
+let buy_auto_all = 0;
 let kloun = 0.5;
 let plus = 1.0;
 let powerprice = 50;
@@ -82,11 +98,15 @@ function myFunction() {
   // 	undefined;
   // }
   if (clicks_all == max_all){
+  	document.getElementById("collect").innerHTML = 'collect: $' + `${reward_max_all}`;
   	document.getElementById("collect").style.visibility = "visible";
   	max_all += 150;
+  	document.getElementById("reward_max_all").innerHTML = ' $' + `${reward_max_all}`;
+  	document.getElementById("collect").innerHTML = 'collect: $' + `${reward_max_all}`;
   } else{
   	undefined;
   }
+  document.getElementById("reward_max_all").innerHTML = ' $' + `${reward_max_all}`;
   document.getElementById("max_all").innerHTML = max_all;
   document.getElementById("max_al").innerHTML = max_all;
   let element = document.getElementById("moon");
@@ -95,13 +115,41 @@ function myFunction() {
         element.style.top = "calc(50% - 290px)";
         element.style.left = "calc(50% - 290px)";
         setTimeout(reset, 30);
+
+  document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
         
 }
 function close_collect(){
-	score += 50;
+	score += reward_max_all;
 	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
 	document.getElementById("collect").style.visibility = "hidden";
+	document.getElementById("reward_max_all").innerHTML = ' $' + `${reward_max_all}`;
+	copy_reward_max_all++;
+	if (copy_reward_max_all == 3){
+		reward_max_all += 50;
+		copy_reward_max_all = 0;
+		document.getElementById("reward_max_all").innerHTML = ' $' + `${reward_max_all}`;
+	} else{
+		undefined;
+	}
+	document.getElementById("reward_max_all").innerHTML = '$' + `${reward_max_all}`;
 }
+
+function collect_auto(){
+	score += reward_max_auto;
+	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
+	document.getElementById("collect_auto").style.visibility = "hidden";
+	document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
+	if (copy_reward_max_auto == 1){
+		reward_max_auto += 75;
+		copy_reward_max_auto = 0;
+		document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
+	} else{
+		undefined;
+	}
+	document.getElementById("reward_max_auto").innerHTML = '$' + `${reward_max_auto}`;
+}
+document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
 function reset(){
 	let element = document.getElementById("moon");
         element.style.width = "600px";
@@ -124,10 +172,21 @@ function power(){
 
 function auto(){
 	if (score >= autoprice){
+		document.getElementById("reward_max_auto").innerHTML = '$' + `${reward_max_auto}`;
 		score -= autoprice;
+		buy_auto_all++;
 		
-		
-		
+		if (buy_auto_all == max_auto){
+			document.getElementById("collect_auto").innerHTML = ' $' + `${reward_max_auto}`;
+	  	document.getElementById("collect_auto").style.visibility = "visible";
+	  	max_auto += 5;
+	  	document.getElementById("max_auto").innerHTML = max_auto;
+	  	document.getElementById("collect_auto").innerHTML = ' $' + `${reward_max_auto}`;
+	  } else{
+	  	undefined;
+	  }
+	  document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
+  	document.getElementById("auto_all").innerHTML = buy_auto_all;
 		document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
 		kloun += 0.5;
 		if (autoprice == 25){
