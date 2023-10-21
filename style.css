@@ -266,6 +266,52 @@ body{
 	transition: 1s;
 }
 
+.auto_ach{
+	z-index: 10000000;
+	border: 1px solid black;
+	color: black;
+	padding: 20px 60px;
+	width: 250px;
+	border: 1px solid white;
+	background-color: whitesmoke;
+	border-radius: 6px;
+	position: absolute;
+	left: 1%;
+	top: 100px;
+	
+	cursor: default;
+}
+.auto_ach2{
+	z-index: 100000000;
+	border: 1px solid black;
+	color: black;
+	padding: 20px 60px;
+	width: 150px;
+	border: 1px solid white;
+	background-color: whitesmoke;
+	border-radius: 6px;
+	position: absolute;
+	left: calc(1% + 260px);
+	top: 100px;
+	
+	cursor: default;
+}
+.auto_ach3{
+	z-index: 10000000;
+	border: 1px solid black;
+	color: black;
+	padding: 20px 60px;
+	border: 1px solid white;
+	background-color: #B0D9B1;
+	border-radius: 6px;
+	position: absolute;
+	left: calc(1% + 420px);
+	top: 100px;
+	visibility: hidden;
+	cursor: pointer;
+	transition: 1s;
+}
+
 .button-35 {
   align-items: center;
   appearance: none;
