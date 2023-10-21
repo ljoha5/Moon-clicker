@@ -39,16 +39,10 @@ body{
 	justify-content: center;
 }
 .play{
-	display: flex;
-	margin: 0 auto;
 	font-size: 3em;
 	opacity: 0;
 	color: white;
-	width: 80%;
-	position: absolute;
-	top: 40%;
 	text-align: center;
-	left: calc(50% - 400px);
 }
 .btn{
 	align-items: center;
