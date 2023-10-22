@@ -141,10 +141,11 @@ function collect_auto(){
 	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
 	document.getElementById("collect_auto").style.visibility = "hidden";
 	document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
-	if (copy_reward_max_auto == 1){
+	copy_reward_max_auto++;
+	if (copy_reward_max_auto == 2){
 		reward_max_auto += 75;
 		copy_reward_max_auto = 0;
-		document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
+		document.getElementById("collect_auto").innerHTML = ' $' + `${reward_max_auto}`;
 	} else{
 		undefined;
 	}
