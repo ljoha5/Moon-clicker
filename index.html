@@ -20,13 +20,17 @@
 
 
 
-<p class="first_clicks_ach button-35"><span id="max_al" style="margin-right: 10px;">100</span> clicks:<span style="margin-left: 10px;" id="reward_max_all"> </span><span></span></p>
+<p class="first_clicks_ach button-35"><span id="max_al" style="margin-right: 10px;">100</span> clicks:<span style="margin-left: 10px;" id="reward_max_all">$50</span><span></span></p>
 <p class="first_clicks_ach2 button-35"><span id="clicks_all"></span>/<span id="max_all"></span></p>
 <p class="first_clicks_ach3 button-36" id="collect" onclick="close_collect()">collect <span style="margin-left: 10px;" id="reward_max_all">x</span></p>
 
 <p class="auto_ach button-35">buy AutoClicker: <span style="margin-left: 10px;" id="reward_max_auto"></span></p>
 <p class="auto_ach2 button-35"><span id="auto_all">0</span>/<span id="max_auto">5</span></p>
 <p class="auto_ach3 button-36" id="collect_auto" onclick="collect_auto()">collect <span style="margin-left: 10px;" id="reward_max_auto"></span></p>
+
+<p class="power_ach button-35">buy Click power: <span style="margin-left: 10px;" id="reward_max_power">$25</span></p>
+<p class="power_ach2 button-35"><span id="copy_reward_max_power">0</span>/<span id="max_power">3</span></p>
+<p class="power_ach3 button-36" id="collect_power" onclick="collect_power()">collect <span style="margin-left: 10px;" id="reward_max_power"></span></p>
 
 
 <!-- <button id="ach" onclick="openach()" class="button-30 ach" role="button">achievements</button> -->
@@ -77,9 +81,16 @@ document.getElementById("collect").innerHTML = 'collect: $' + `${reward_max_all}
 let reward_max_auto = 75;
 let copy_reward_max_auto = 0;
 document.getElementById("collect_auto").innerHTML = 'collect: $' + `${reward_max_auto}`;
-
 let max_auto = 5;
 document.getElementById("max_auto").innerHTML = max_auto;
+
+let reward_max_power = 25;
+let copy_reward_max_power = 0;
+document.getElementById("collect_power").innerHTML = 'collect: $' + `${reward_max_power}`;
+let max_power = 3;
+document.getElementById("max_power").innerHTML = max_power;
+document.getElementById("copy_reward_max_power").innerHTML = copy_reward_max_power;
+
 let buy_auto_all = 0;
 let kloun = 0.5;
 let plus = 1.0;
@@ -142,15 +153,29 @@ function collect_auto(){
 	document.getElementById("collect_auto").style.visibility = "hidden";
 	document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
 	copy_reward_max_auto++;
+	document.getElementById("copy_reward_max_power").innerHTML = copy_reward_max_power;
 	if (copy_reward_max_auto == 2){
 		reward_max_auto += 75;
 		copy_reward_max_auto = 0;
+		document.getElementById("copy_reward_max_power").innerHTML = copy_reward_max_power;
 		document.getElementById("collect_auto").innerHTML = ' $' + `${reward_max_auto}`;
 	} else{
 		undefined;
 	}
 	document.getElementById("reward_max_auto").innerHTML = '$' + `${reward_max_auto}`;
 }
+
+function collect_power(){
+	score += reward_max_power;
+	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
+	document.getElementById("collect_power").style.visibility = "hidden";
+	document.getElementById("reward_max_power").innerHTML = ' $' + `${reward_max_power}`;
+	reward_max_power += 25;
+
+	document.getElementById("collect_power").innerHTML = ' $' + `${reward_max_power}`;
+	document.getElementById("reward_max_power").innerHTML = '$' + `${reward_max_power}`;
+}
+
 document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
 function reset(){
 	let element = document.getElementById("moon");
@@ -167,6 +192,19 @@ function power(){
 		document.getElementById("power").innerHTML = 'Click power - $' + `${powerprice.toFixed(1)}`;
 		
 		document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
+		copy_reward_max_power++;
+		document.getElementById("copy_reward_max_power").innerHTML = copy_reward_max_power;
+		if (copy_reward_max_power == max_power){
+	  	document.getElementById("collect_power").innerHTML = 'collect: $' + `${reward_max_power}`;
+	  	document.getElementById("collect_power").style.visibility = "visible";
+	  	max_power += 3;
+	  	document.getElementById("max_power").innerHTML = max_power;
+	  	document.getElementById("reward_max_power").innerHTML = ' $' + `${reward_max_power}`;
+	  	document.getElementById("collect_power").innerHTML = 'collect: $' + `${reward_max_power}`;
+	  } else{
+	  	undefined;
+	  }
+
 	} else{
 		alert("You need more money!");
 	}
