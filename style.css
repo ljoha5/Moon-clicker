@@ -78,10 +78,13 @@ body{
 	}
 }
 @media (max-width: 1010px){
+	.score{
+		top: 20vh;
+	}
 	.footer{
-			width: 90%;
-			left: 5%;
-			height: 400px;
+		width: 90%;
+		left: 5%;
+		height: 400px;
 	}
 	.btn{
 		width: 150px;
