@@ -16,7 +16,6 @@ body{
 	background-image: url(space.png);
 	background-size: cover;
 	overflow:hidden;
-   	transform: scale(0.9);
 }
 .clickfon{
 	cursor: default;
