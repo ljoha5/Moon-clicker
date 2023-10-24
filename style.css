@@ -63,7 +63,7 @@ body{
 			left: 15%;
 	}
 }
-@media (max-width: 1200px){
+@media (max-width: 1400px){
 	.score{
 		top: 22vh;
 	}
@@ -77,6 +77,24 @@ body{
 	}
 	.text{
 		font-size: 5em;
+	}
+	.footer{
+		opacity: 0;
+	}
+	.btn{
+		opacity: 0;
+	}
+	.moon, .ach, .first_clicks_ach, .first_clicks_ach2, .first_clicks_ach3, .auto_clicks_ach, .auto_clicks_ach2, .auto_clicks_ach3, .power_clicks_ach, .power_clicks_ach2, .power_clicks_ach3{
+		opacity: 0;
+	}
+	.clickfon{
+		z-index: 10000000000;
+	}
+	.score{
+		opacity: 0;
+	}
+	.play{
+		opacity: 1;
 	}
 }
 @media (max-width: 1010px){
