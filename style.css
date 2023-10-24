@@ -102,7 +102,7 @@ body{
 	.btn{
 		opacity: 0;
 	}
-	.moon, .ach, .first_clicks_ach, .first_clicks_ach2, .first_clicks_ach3{
+	.moon, .ach, .first_clicks_ach, .first_clicks_ach2, .first_clicks_ach3, .auto_clicks_ach, .auto_clicks_ach2, .auto_clicks_ach3, .power_clicks_ach, .power_clicks_ach2, .power_clicks_ach3{
 		opacity: 0;
 	}
 	.clickfon{
