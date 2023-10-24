@@ -64,6 +64,9 @@ body{
 	}
 }
 @media (max-width: 1200px){
+	.score{
+		top: 20vh;
+	}
 	.footer{
 			width: 80%;
 			height: 300px;
@@ -78,9 +81,7 @@ body{
 	}
 }
 @media (max-width: 1010px){
-	.score{
-		top: 20vh;
-	}
+	
 	.footer{
 		width: 90%;
 		left: 5%;
