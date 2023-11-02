@@ -1,6 +1,7 @@
 console.log(localStorage);
 console.log(localStorage.length);
-var score, clicks_all,
+var score = 0;
+	var clicks_all,
 	max_all,image_all,
 	reward_max_all,
 	copy_reward_max_all,
