@@ -266,6 +266,19 @@ function setDefault(){
 
 
 function reload() {
+	
+	
+	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
+	document.getElementById("clicks_all").innerHTML = clicks_all;
+	image_all = max_all - 1;
+	// if (clicks_all == image_all){
+
+	// 	document.getElementById("collect").style.visibility = "visible";
+	// } else{
+	// 	undefined;
+	// }
+	setLocalStorage();
+
 	if(localStorage.length != 17) {
 	setDefault();
 
@@ -291,16 +304,6 @@ function reload() {
 	
 	}
 	
-	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
-	document.getElementById("clicks_all").innerHTML = clicks_all;
-	image_all = max_all - 1;
-	// if (clicks_all == image_all){
-
-	// 	document.getElementById("collect").style.visibility = "visible";
-	// } else{
-	// 	undefined;
-	// }
-	setLocalStorage();
 	if (clicks_all == max_all){
 		document.getElementById("collect").innerHTML = 'collect: $' + `${reward_max_all}`;
 		document.getElementById("collect").style.visibility = "visible";
