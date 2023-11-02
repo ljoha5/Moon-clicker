@@ -15,30 +15,7 @@ console.log(localStorage.length);
 	powerprice,
 	autoprice;
 	
-if(localStorage.length == false) {
-	setDefault();
 
-} else {
-
-	score = Number.parseFloat(localStorage.score);
-	clicks_all = Number.parseFloat(localStorage.clicks_all);
-	max_all = Number.parseFloat(localStorage.max_all);
-	image_all = Number.parseFloat(localStorage.image_all);
-	reward_max_all = Number.parseFloat(localStorage.reward_max_all);
-	copy_reward_max_all = Number.parseFloat(localStorage.copy_reward_max_all);
-	reward_max_auto = Number.parseFloat(localStorage.reward_max_auto);
-	copy_reward_max_auto = Number.parseFloat(localStorage.copy_reward_max_auto);
-	max_auto = Number.parseFloat(localStorage.max_auto);
-	reward_max_power = Number.parseFloat(localStorage.reward_max_power);
-	copy_reward_max_power = Number.parseFloat(localStorage.copy_reward_max_power);
-	max_power = Number.parseFloat(localStorage.max_power);
-	buy_auto_all = Number.parseFloat(localStorage.buy_auto_all);
-	kloun = Number.parseFloat(localStorage.kloun);
-	plus = Number.parseFloat(localStorage.plus);
-	powerprice = Number.parseFloat(localStorage.powerprice);
-	autoprice = Number.parseFloat(localStorage.autoprice);
-
-}
 
 document.getElementById("clicks_all").innerHTML = clicks_all;
 document.getElementById("max_all").innerHTML = max_all;
@@ -289,6 +266,31 @@ function setDefault(){
 
 
 function reload() {
+	if(localStorage.length != 17) {
+	setDefault();
+
+	} else {
+	
+		score = Number.parseFloat(localStorage.score);
+		clicks_all = Number.parseFloat(localStorage.clicks_all);
+		max_all = Number.parseFloat(localStorage.max_all);
+		image_all = Number.parseFloat(localStorage.image_all);
+		reward_max_all = Number.parseFloat(localStorage.reward_max_all);
+		copy_reward_max_all = Number.parseFloat(localStorage.copy_reward_max_all);
+		reward_max_auto = Number.parseFloat(localStorage.reward_max_auto);
+		copy_reward_max_auto = Number.parseFloat(localStorage.copy_reward_max_auto);
+		max_auto = Number.parseFloat(localStorage.max_auto);
+		reward_max_power = Number.parseFloat(localStorage.reward_max_power);
+		copy_reward_max_power = Number.parseFloat(localStorage.copy_reward_max_power);
+		max_power = Number.parseFloat(localStorage.max_power);
+		buy_auto_all = Number.parseFloat(localStorage.buy_auto_all);
+		kloun = Number.parseFloat(localStorage.kloun);
+		plus = Number.parseFloat(localStorage.plus);
+		powerprice = Number.parseFloat(localStorage.powerprice);
+		autoprice = Number.parseFloat(localStorage.autoprice);
+	
+	}
+	
 	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
 	document.getElementById("clicks_all").innerHTML = clicks_all;
 	image_all = max_all - 1;
