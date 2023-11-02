@@ -268,8 +268,8 @@ function setDefault(){
 function reload() {
 	
 	
-	document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
-	document.getElementById("clicks_all").innerHTML = clicks_all;
+	//document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
+	//document.getElementById("clicks_all").innerHTML = clicks_all;
 	image_all = max_all - 1;
 	// if (clicks_all == image_all){
 
