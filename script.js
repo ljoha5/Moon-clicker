@@ -28,7 +28,7 @@ document.getElementById("max_auto").innerHTML = max_auto;
 document.getElementById("max_power").innerHTML = max_power;
 document.getElementById("copy_reward_max_power").innerHTML = copy_reward_max_power;
 
-document.getElementById("auto").innerHTML = 'AutoClicker - $' + `${autoprice.toFixed(1)}`;
+document.getElementById("auto").innerHTML = 'AutoClicker - $' + `${autoprice}`;
 document.getElementById("power").innerHTML = 'Click power - $' + `${powerprice.toFixed(1)}`;
 document.getElementById("auto_all").innerHTML = buy_auto_all;
 document.getElementById("reward_max_power").innerHTML = ' $' + `${reward_max_power}`;
