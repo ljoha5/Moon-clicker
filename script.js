@@ -29,12 +29,12 @@ document.getElementById("max_power").innerHTML = max_power;
 document.getElementById("copy_reward_max_power").innerHTML = copy_reward_max_power;
 
 document.getElementById("auto").innerHTML = 'AutoClicker - $' + `${autoprice}`;
-document.getElementById("power").innerHTML = 'Click power - $' + `${powerprice.toFixed(1)}`;
+document.getElementById("power").innerHTML = 'Click power - $' + `${powerprice}`;
 document.getElementById("auto_all").innerHTML = buy_auto_all;
 document.getElementById("reward_max_power").innerHTML = ' $' + `${reward_max_power}`;
 document.getElementById("reward_max_all").innerHTML = ' $' + `${reward_max_all}`;
 document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
-document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
+document.getElementById("score").innerHTML = '$' + `${score}`;
 
 function myFunction() {
 
