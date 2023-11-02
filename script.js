@@ -279,7 +279,7 @@ function reload() {
 	// }
 	setLocalStorage();
 
-	if(localStorage.length != 17) {
+	if(localStorage.length == 0) {
 	setDefault();
 
 	} else {
