@@ -16,7 +16,7 @@ console.log(localStorage.length);
 	autoprice;
 	
 
-
+setDefault();
 document.getElementById("clicks_all").innerHTML = clicks_all;
 document.getElementById("max_all").innerHTML = max_all;
 document.getElementById("max_al").innerHTML = max_all;
@@ -225,44 +225,42 @@ function setLocalStorage(){
 }
 
 function setDefault(){
-	score = 0;
-    clicks_all = 0;
-	max_all = 100;
-	image_all= max_all - 1;
-	reward_max_all = 50;
-	copy_reward_max_all = 0;
-	reward_max_auto = 75;
-	copy_reward_max_auto = 0;
-	max_auto = 5;
 
-	reward_max_power = 25;
-	copy_reward_max_power = 0;
-	max_power = 3;
-	buy_auto_all = 0;
-	kloun = 0.5;
-	plus = 1.0;
-	powerprice = 50;
-	autoprice = 25;
+	score = ( localStorage.getItem("score") != 'undefined' &&
+	 	localStorage.getItem("score") != 'NaN' ) ? Number(localStorage.getItem("score")) : 0;
+	clicks_all = ( localStorage.getItem("clicks_all") != 'undefined' &&
+	 	localStorage.getItem("clicks_all") != 'NaN' )  ? Number(localStorage.getItem("clicks_all")) : 0;
+	max_all = ( localStorage.getItem("max_all") != 'undefined' &&
+		localStorage.getItem("max_all") != 'NaN' )  ? Number(localStorage.getItem("max_all")) : 100;
+	reward_max_all = ( localStorage.getItem("reward_max_all") != 'undefined' &&
+		localStorage.getItem("reward_max_all") != 'NaN' ) ? Number(localStorage.getItem("reward_max_all")) :  50;
+	copy_reward_max_all = ( localStorage.getItem("copy_reward_max_all") != 'undefined' &&
+		localStorage.getItem("copy_reward_max_all") != 'NaN' ) ? Number(localStorage.getItem("copy_reward_max_all")) : 0;
+	reward_max_auto = ( localStorage.getItem("reward_max_auto") != 'undefined' &&
+		localStorage.getItem("reward_max_auto") != 'NaN' ) ? Number(localStorage.getItem("reward_max_auto")) : 75; 
+	copy_reward_max_auto =  ( localStorage.getItem("copy_reward_max_auto") != 'undefined' &&
+		localStorage.getItem("copy_reward_max_auto") != 'NaN' ) ? Number(localStorage.getItem("copy_reward_max_auto")) : 0;
+	max_auto = ( localStorage.getItem("max_auto") != 'undefined' &&
+		localStorage.getItem("max_auto") != 'NaN' ) ? Number(localStorage.getItem("max_auto")) : 5;
+	buy_auto_all = ( localStorage.getItem("buy_auto_all") != 'undefined' &&
+		localStorage.getItem("buy_auto_all") != 'NaN' ) ? Number(localStorage.getItem("buy_auto_all")) : 0;
+	reward_max_power = ( localStorage.getItem("reward_max_power") != 'undefined' &&
+		localStorage.getItem("reward_max_power") != 'NaN' ) ? Number(localStorage.getItem("reward_max_power")) : 25;
+	copy_reward_max_power = ( localStorage.getItem("copy_reward_max_power") != 'undefined' &&
+		localStorage.getItem("copy_reward_max_power") != 'NaN' ) ? Number(localStorage.getItem("copy_reward_max_power")) : 0;
+	max_power = ( localStorage.getItem("max_power") != 'undefined' &&
+		localStorage.getItem("max_power") != 'NaN' ) ? Number(localStorage.getItem("max_power")) : 3;
+	kloun = ( localStorage.getItem("kloun") != 'undefined' &&
+		localStorage.getItem("kloun") != 'NaN' ) ? Number(localStorage.getItem("kloun")) : 0.5;
+	plus = ( localStorage.getItem("plus") != 'undefined' &&
+		localStorage.getItem("plus") != 'NaN' ) ? Number(localStorage.getItem("plus")) : 1.0;
+	powerprice = ( localStorage.getItem("powerprice") != 'undefined' &&
+		localStorage.getItem("powerprice") != 'NaN' ) ? Number(localStorage.getItem("powerprice")) : 50;
+	autoprice = ( localStorage.getItem("autoprice") != 'undefined' &&
+		localStorage.getItem("autoprice") != 'NaN' ) ? Number(localStorage.getItem("autoprice")) : 25;
+	
+	image_all= max_all - 1;	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function reload() {
