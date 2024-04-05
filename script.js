@@ -180,7 +180,7 @@ function auto(){
 			null;
 		}
 
-		autoprice += 25;
+		autoprice += 15;
 		document.getElementById("auto").innerHTML = 'AutoClicker - $' + `${autoprice.toFixed(1)}`;
 	}  else{
 		alert("You need more money!");
