@@ -171,7 +171,7 @@ function auto(){
 	  document.getElementById("reward_max_auto").innerHTML = ' $' + `${reward_max_auto}`;
   	document.getElementById("auto_all").innerHTML = buy_auto_all;
 		document.getElementById("score").innerHTML = '$' + `${score.toFixed(1)}`;
-		kloun += 0.5;
+		kloun += 1;
 		if (autoprice == 25){
 			plusik();
 			document.getElementById("auto").innerHTML = 'AutoClicker - $' + `${autoprice.toFixed(1)}`;
